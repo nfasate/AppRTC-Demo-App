@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioCallViewController" customModule="HeroEyez" customModuleProvider="target">
+            <connections>
+                <outlet property="callHangUpButton" destination="2zw-xg-vJV" id="dpz-ir-7js"/>
+                <outlet property="micButton" destination="BIB-Ef-ggU" id="9Ce-Fd-Y4c"/>
+                <outlet property="speakerOnOffButton" destination="Coc-eb-o75" id="sgZ-Xn-8Vz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNL-4H-6gN">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-eb-o75">
+                            <rect key="frame" x="280" y="61" width="40" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="9wb-2s-JGE"/>
+                                <constraint firstAttribute="width" secondItem="Coc-eb-o75" secondAttribute="height" multiplier="1:1" id="LKm-zc-ifE"/>
+                            </constraints>
+                            <state key="normal" image="speaker_on"/>
+                            <connections>
+                                <action selector="speakerOnOffButtonPressed:" destination="-1" eventType="touchUpInside" id="dvE-Be-xwn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIB-Ef-ggU">
+                            <rect key="frame" x="280" y="8" width="40" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="BIB-Ef-ggU" secondAttribute="height" multiplier="1:1" id="RVL-Fm-owF"/>
+                            </constraints>
+                            <state key="normal" image="mic_on"/>
+                            <connections>
+                                <action selector="micButtonPressed:" destination="-1" eventType="touchUpInside" id="Hes-Ox-8gt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zw-xg-vJV">
+                            <rect key="frame" x="280" y="114" width="40" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="2zw-xg-vJV" secondAttribute="height" multiplier="1:1" id="Yj9-CJ-D9P"/>
+                            </constraints>
+                            <state key="normal" image="callReject"/>
+                            <connections>
+                                <action selector="hangUpCallButtonPressed:" destination="-1" eventType="touchUpInside" id="4Cg-X0-C2z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Coc-eb-o75" firstAttribute="top" secondItem="BIB-Ef-ggU" secondAttribute="bottom" constant="13" id="4Ma-bI-3H5"/>
+                        <constraint firstItem="2zw-xg-vJV" firstAttribute="top" secondItem="Coc-eb-o75" secondAttribute="bottom" constant="13" id="FXp-UW-ctw"/>
+                        <constraint firstItem="Coc-eb-o75" firstAttribute="centerX" secondItem="NNL-4H-6gN" secondAttribute="centerX" id="Jag-zj-qIx"/>
+                        <constraint firstItem="2zw-xg-vJV" firstAttribute="width" secondItem="Coc-eb-o75" secondAttribute="width" id="RpA-vq-pJ4"/>
+                        <constraint firstItem="Coc-eb-o75" firstAttribute="centerY" secondItem="NNL-4H-6gN" secondAttribute="centerY" id="ggC-De-LHT"/>
+                        <constraint firstItem="BIB-Ef-ggU" firstAttribute="centerX" secondItem="Coc-eb-o75" secondAttribute="centerX" id="jZQ-m3-ncF"/>
+                        <constraint firstItem="2zw-xg-vJV" firstAttribute="centerX" secondItem="Coc-eb-o75" secondAttribute="centerX" id="n01-fW-AXf"/>
+                        <constraint firstItem="BIB-Ef-ggU" firstAttribute="width" secondItem="Coc-eb-o75" secondAttribute="width" id="wgx-yn-FSx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NNL-4H-6gN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="3ns-wB-T96"/>
+                <constraint firstItem="NNL-4H-6gN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="d2f-Ex-K92"/>
+                <constraint firstItem="NNL-4H-6gN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="fy9-Mj-h9U"/>
+                <constraint firstItem="NNL-4H-6gN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ny9-IG-fdN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="487" y="191"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="callReject" width="100" height="100"/>
+        <image name="mic_on" width="100" height="100"/>
+        <image name="speaker_on" width="100" height="100"/>
+    </resources>
+</document>
